@@ -1,0 +1,105 @@
+.text-color {
+    color: #154079;
+}
+
+.navbar-brand {
+    color: #154079;
+}
+
+.navbar-brand :hover {
+    color: #154079;
+}
+
+nav {
+    z-index: 1000;
+}
+
+hr {
+    height: 5px;
+    background-color: #FCC100;
+    border: none;
+}
+
+p {
+    font-size: 15px;
+}
+
+
+.contact-form {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 400px;
+}
+.btn-custom {
+    background: linear-gradient(45deg, #1552C2, #007bff);
+    border: none;
+    color: white;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+}
+.btn-custom:hover {
+    background: linear-gradient(45deg, #007bff, #1552C2);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.carousel-fade .carousel-item {
+    opacity: 0;
+    transition-duration: .6s;
+    transition-property: opacity;
+}
+
+.carousel-fade .carousel-item.active,
+.carousel-fade .carousel-item-next.carousel-item-start,
+.carousel-fade .carousel-item-prev.carousel-item-end {
+    opacity: 1;
+}
+
+.carousel-fade .active.carousel-item-start,
+.carousel-fade .active.carousel-item-end {
+    opacity: 0;
+}
+
+.carousel-fade .carousel-item-next,
+.carousel-fade .carousel-item-prev,
+.carousel-fade .carousel-item.active,
+.carousel-fade .active.carousel-item-start,
+.carousel-fade .active.carousel-item-prev {
+    transform: translateX(0);
+    transform: translate3d(0, 0, 0);
+}
