@@ -5,21 +5,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    
 
+    <!-- CDN LINKS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js"></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
     <title>RTU Website</title>
 
+    <!-- FAVICON -->
     <link rel="icon" type="image/x-icon" href="./img/RTU UPDATED LOGO-COLORED VERSION.png">
+
+    <!-- CSS AND JAVASCRIPT -->
     <link rel="stylesheet" href="index.css">
     <script src="./index.js" defer></script>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+    <div class="scroll-top" id="scrollTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top" id="mainNav">
         <div class="container">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -27,11 +45,11 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-
             <div class="d-flex">
                 <div class="me-2">
-                    <a href="./index.html">
-                        <img src="./img/RTU UPDATED LOGO-COLORED VERSION.png" alt="RTU Logo" width="60px" height="60x">
+                    <a href="#" class="logo-link">
+                        <img src="./img/RTU UPDATED LOGO-COLORED VERSION.png" alt="RTU Logo" width="60px" height="60x"
+                            class="logo-img">
                     </a>
                 </div>
                 <div class="d-none d-sm-block p-0">
@@ -44,421 +62,491 @@
                 </div>
             </div>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav  mb-2 mb-lg-0">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="./index.html"><b>Home</b></a>
+                        <a class="nav-link active" aria-current="page" href="#home"><b>Home</b></a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            <b>About</b>
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-lg-end">
-                            <li><a class="dropdown-item" href="#about_us">RTU</a></li>
-                            <li><a class="dropdown-item" href="#m_v_p">Mission, Vision, and Philosophy</a></li>
-                            <li><a class="dropdown-item" href="#g_ob">Objective and Goals</a></li>
-                            <li><a class="dropdown-item" href="#contact">Contact us</a></li>
-                        </ul>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about_us"><b>About</b></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#m_v_p"><b>Mission & Vision</b></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#g_ob"><b>Goals</b></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact"><b>Contact</b></a>
                     </li>
                 </ul>
             </div>
-
         </div>
     </nav>
 
-    <div id="carouselExample" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <div id="home" class="carousel slide carousel-fade" data-bs-ride="carousel">
         <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active"
-                aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#home" data-bs-slide-to="0" class="active" aria-current="true"
+                aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#home" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#home" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#home" data-bs-slide-to="3" aria-label="Slide 4"></button>
         </div>
-
 
         <div class="carousel-inner">
             <div class="carousel-item active" data-bs-interval="5000">
                 <img src="./img/Capture.PNG" class="d-block w-100" alt="First slide">
+
             </div>
+
             <div class="carousel-item" data-bs-interval="5000">
                 <img src="./img/Capture1.PNG" class="d-block w-100" alt="Second slide">
             </div>
+
             <div class="carousel-item" data-bs-interval="5000">
-                <img src="./img/Capture2.PNG" class="d-block w-100" alt="Second slide">
+                <img src="./img/Capture2.PNG" class="d-block w-100" alt="Third slide">
             </div>
+
             <div class="carousel-item" data-bs-interval="5000">
-                <img src="./img/Capture3.PNG" class="d-block w-100" alt="Third slide">
+                <img src="./img/Capture3.PNG" class="d-block w-100" alt="Fourth slide">
             </div>
         </div>
 
-
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <button class="carousel-control-prev" type="button" data-bs-target="#home" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+
+        <button class="carousel-control-next" type="button" data-bs-target="#home" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
         </button>
+
     </div>
 
     <hr class="mx-3">
 
-    <div class="container">
-        <div class="row">
-            <h2 class="text-center mb-3">Featured Informations</h2>
-            <div id="carouselExample2" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <section id="about_us" class="py-5">
+        <div class="position-relative">
+            <img src="./img/about2.jpg" class="img-fluid w-100" alt="">
+            <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
+                style="background-color: rgba(0,0,0,0.6);">
+                <div class="container">
+                    <h1 class="text-white display-4 fw-bold text-center" data-aos="zoom-in">ABOUT US</h1>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid mt-5">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="my-2 mx-4" data-aos="fade-right">
+                        <h2 class="fs-5 text-color"><b>History of RTU</b></h2>
+                        <p>Rizal Technological University (RTU) was established on July 11, 1969, upon the approval of
+                            the
+                            Secretary of Education in response to the utmost request of the Provincial Board of Rizal,
+                            headed by
+                            Governor Isidro S. Rodriguez, to put up a higher education institution in the Province of
+                            Rizal.
+                            It
+                            was first known as the College of Rizal.</p>
+                        <p>
+                            The College of Rizal opened its classes on July 14, 1969, with course offerings in business
+                            administration, education, and liberal arts. On March 20, 1975, the College of Rizal in
+                            Pasig
+                            and
+                            Rizal Technical High School in Mandaluyong, both situated in the Province of Rizal, were
+                            merged
+                            and
+                            converted into the Rizal Technological Colleges by virtue of Presidential Decree (PD) No.
+                            674.
+                            The
+                            decree authorized the expansion of curricular programs and the promotion of research in the
+                            development and conservation of natural resources in the Province of Rizal.
+                        </p>
+                        <p>
+                            This decree broadened the support and strengthened the organization of the college. In 1975,
+                            upon
+                            the establishment of the Metropolitan Manila Commission, Pasig was transferred to the
+                            territorial
+                            jurisdiction of the MMC. The province of Rizal could not continue to financially support the
+                            colleges. Several alternatives were proposed to save the RTC. One was to transfer the
+                            management
+                            and
+                            administration of the RTC to one of the existing towns in the Province of Rizal or
+                            Metropolitan
+                            Manila. The worst possible alternative was to phase out the Colleges. The leadership, the
+                            faculty,
+                            and the studentry of the colleges would not allow this to happen, however, so they worked
+                            out
+                            the
+                            possible nationalization of the RTC.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                    <div class="mt-3" data-aos="fade-left">
+                        <img src="./img/photo.jpg" alt="" class="img-fluid rounded shadow-lg">
+                    </div>
+                </div>
+            </div>
 
-                <div class="carousel-inner">
-                    <div class="carousel-item active" data-bs-interval="5000">
-                        <div class="d-flex justify-content-evenly">
-                            <div class="card" style="width: 18rem;">
-                                <img src="./img/photo.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">About RTU</h5>
-                                    <p class="card-text">Click to know the History of Rizal
-                                        Technological University</p>
-                                    <a href="#about_us" class="btn btn-primary">Click Here</a>
-                                </div>
+            <div class="row">
+                <div class="col">
+                    <div class="my-2 mx-4" data-aos="fade-up">
+                        <p>
+                            With the support of then Metropolitan Manila Governor Madam
+                            Imelda Marcos, the RTC constituency,
+                            the Kabataang Barangay School Chapter of the RTC led by Dr. Jesus Rodrigo F. Torres, and the
+                            Collegiate and High School Faculty Clubs at the forefront of the struggle for survival,
+                            President Ferdinand E. Marcos signed into law Presidential Decree 1341-A on April 1, 1978,
+                            converting the Rizal Technological Colleges into a State College. The decree, however, was
+                            received only on October 13, 1978; thus, the RTC has been celebrating its College Week, and
+                            later its University Week on the days centered on October 13. After 19 years, the college
+                            was
+                            converted into the Rizal Technological University on October 11, 1997, by virtue of Republic
+                            Act
+                            No. 8365.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <div class="my-4 mx-4" data-aos="fade-up">
+                        <p>
+                            RTU provides professional, scientific, and technological education in engineering,
+                            technology,
+                            education, arts, sciences, business, and entrepreneurship. It also promotes research,
+                            extension,
+                            and advanced studies in these areas. Through its Cooperative Education Program, RTU
+                            maintains
+                            strong industry partnerships and involves students in civic activities. The university's
+                            programs are duly accredited by the Accrediting Agency of Chartered Colleges and
+                            Universities in
+                            the Philippines (AACCUP). The university is also ISO-certified.
+                        </p>
+                        <p>
+                            Today, RTU has two campuses. The Mandaluyong Main Campus houses the College of Arts and
+                            Sciences
+                            (CAS), the College of Business, Entrepreneurship, and Accountancy (CBEA), the College of
+                            Education (CEd), and the College of Engineering (CEng). The Pasig Branch includes the
+                            Institute
+                            of Human Kinetics (IHK), the Institute of Architecture (IA), and the Institute of Computer
+                            Studies (ICS).
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <h1 class="fs-5 text-color text-center" data-aos="fade-up"><b>THE PANDAYANG RIZALIA ETHOS</b></h1>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-3 col-md-3 col-sm-12 text-center" data-aos="fade-right">
+                    <img src="./img/photo2.jpg" alt="" class="img-fluid rounded-circle shadow-lg my-4"
+                        style="max-width: 250px;">
+                </div>
+                <div class="col-lg-9">
+                    <div class="my-2 mx-4" data-aos="fade-left">
+                        <p>
+                            Substantiated by RTU's mission to produce graduates honed and cloaked in Dr. Jose Rizal's
+                            patriotic ideals and values, the "Pandayang Rizalia" came into being.
+                        </p>
+                        <p>
+                            Pandayang Rizalia is a cogent expression construed as a "Forge of Rizalian Ideals" or "Forge
+                            of
+                            Rizal's Teachings" that suggests a place or institution dedicated to nurturing and
+                            developing
+                            the values and principles exemplified by Dr. Jose Rizal such as love of country,
+                            intellectual
+                            pursuit, social justice, and moral integrity.
+                        </p>
+                        <p>
+                            Pandayang Rizalia is an educational institution that provides holistic learning environments
+                            and
+                            learning spaces, emboldening the illustriousness of Rizal's patriotism. It is envisioned as
+                            a
+                            center of learning, culture, and character development where individuals are molded and
+                            enlaced
+                            with Rizal's noble ideals as a paragon of wisdom and intellect.
+                        </p>
+                        <p>
+                            RTU also appropriated Pandayang Rizalia as its identifying mantra and moniker to seal its
+                            brand
+                            with reverence to the warrior and hero it is named after. An emblem that highlights academic
+                            excellence, cultivation of patriotism, critical thinking, and ethical leadership reflecting
+                            the
+                            spirit of Rizal's life and work. An ultimate driver that produces generations honed like
+                            metals
+                            and beaten into a final shape worthy of Rizal's legacy, borne with an inflexible, daring,
+                            and
+                            zealous character unbending to tyranny.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="mx-3">
+
+    <section id="m_v_p" class="py-5">
+        <div class="position-relative">
+            <img src="./img/Capture4.1.PNG" class="img-fluid w-100" alt="">
+            <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
+                style="background-color: rgba(0,0,0,0.6);">
+                <div class="container">
+                    <h1 class="text-white display-4 fw-bold text-center" data-aos="zoom-in">OUR MISSION, VISION, AND
+                        PHILOSOPHY</h1>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid mt-5">
+            <div class="row justify-content-center mb-5">
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card h-100 border-0 shadow-lg text-center hover-card">
+                        <div class="card-body p-5">
+                            <div class="feature-icon mb-4">
+                                <i class="fas fa-bullseye"></i>
                             </div>
-
-                            <div class="card" style="width: 18rem;">
-                                <img src="./img/Capture4.PNG" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Mission, Vision, Philosophy</h5>
-                                    <p class="card-text">Check out the Mission, Vision, and Philosophy of Rizal
-                                        Technological University</p>
-                                    <a href="#m_v_p" class="btn btn-primary">Click Here</a>
-                                </div>
-                            </div>
-
+                            <h2 class="text-color">MISSION</h2>
+                            <p>
+                                To produce competent and socially responsible professionals through innovative
+                                instructions,
+                                high-impact research, and sustainable extension services responsive to the diverse needs
+                                of
+                                glocal communities.
+                            </p>
+                            <p>
+                                <em>Makalikha ng mga propesyonal na may kakayahan at may gampaning panlipunan sa
+                                    pamamagitan ng
+                                    inobatibong pagtuturo, mataas na antas ng pananaliksik, at nagpapatuloy na
+                                    programang
+                                    pang-ekstensiyon na tumutugon sa iba't ibang pangangailangan ng mga glokal na
+                                    komunidad.</em>
+                            </p>
                         </div>
                     </div>
-                    <div class="carousel-item" data-bs-interval="5000">
-                        <div class="d-flex justify-content-evenly">
-                            <div class="card" style="width: 18rem;">
-                                <img src="./img/Capture5.PNG" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Goals and Objectives</h5>
-                                    <p class="card-text">Goals and objectives of Rizal
-                                        Technological University to the students.</p>
-                                    <a href="#g_ob" class="btn btn-primary">Click Here</a>
-                                </div>
+                </div>
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card h-100 border-0 shadow-lg text-center hover-card">
+                        <div class="card-body p-5">
+                            <div class="feature-icon mb-4">
+                                <i class="fas fa-eye"></i>
                             </div>
-
-                            <div class="card" style="width: 18rem;">
-                                <img src="./img/Capture6.PNG" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Contact Us</h5>
-                                    <p class="card-text">Contanct Us if you any concerns!</p>
-                                    <a href="#contact" class="btn btn-primary">Click Here</a>
-                                </div>
-                            </div>
-
+                            <h2 class="text-color">VISION</h2>
+                            <p>A smart and transnational university.</p>
+                            <p><em>Isang matalino at transnasyonal na unibersidad.</em></p>
                         </div>
                     </div>
                 </div>
-                <button class="carousel-control-prev " type="button" data-bs-target="#carouselExample2"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample2"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-            </div>
-        </div>
-    </div>
-
-    <hr class="mx-3">
-    <h2 class="text-center">About RTU</h2>
-
-    <div class="position-relative">
-        <img src="./img/about2.jpg" class="img-fluid w-100" alt="">
-        <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
-            style="background-color: rgba(0,0,0,0.4);">
-            <div class="container">
-                <h1 class="text-white display-4 fw-bold text-center" id="about_us">ABOUT US</h1>
-            </div>
-        </div>
-    </div>
-    <div class="container-fluid">
-
-        <div class="row">
-            <div class="col-lg-8">
-                <div class="my-2 mx-4">
-                    <h2 class="fs-5 text-color"><b>History of RTU</b></h2>
-                    <p>Rizal Technological University (RTU) was established on July 11, 1969, upon the approval of the
-                        Secretary of Education in response to the utmost request of the Provincial Board of Rizal,
-                        headed by
-                        Governor Isidro S. Rodriguez, to put up a higher education institution in the Province of Rizal.
-                        It
-                        was first known as the College of Rizal.</p>
-                    <p>
-                        The College of Rizal opened its classes on July 14, 1969, with course offerings in business
-                        administration, education, and liberal arts. On March 20, 1975, the College of Rizal in Pasig
-                        and
-                        Rizal Technical High School in Mandaluyong, both situated in the Province of Rizal, were merged
-                        and
-                        converted into the Rizal Technological Colleges by virtue of Presidential Decree (PD) No. 674.
-                        The
-                        decree authorized the expansion of curricular programs and the promotion of research in the
-                        development and conservation of natural resources in the Province of Rizal.
-                    </p>
-                    <p>
-                        This decree broadened the support and strengthened the organization of the college. In 1975,
-                        upon
-                        the establishment of the Metropolitan Manila Commission, Pasig was transferred to the
-                        territorial
-                        jurisdiction of the MMC. The province of Rizal could not continue to financially support the
-                        colleges. Several alternatives were proposed to save the RTC. One was to transfer the management
-                        and
-                        administration of the RTC to one of the existing towns in the Province of Rizal or Metropolitan
-                        Manila. The worst possible alternative was to phase out the Colleges. The leadership, the
-                        faculty,
-                        and the studentry of the colleges would not allow this to happen, however, so they worked out
-                        the
-                        possible nationalization of the RTC.
-                    </p>
-
-                </div>
-            </div>
-            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
-                <div class="mt-3">
-                    <img src="./img/photo.jpg" alt="" width="400px" c>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <div class="my-2 mx-4">
-                    <p>
-                        With the support of then Metropolitan Manila Governor Madam Imelda Marcos, the RTC constituency,
-                        the Kabataang Barangay School Chapter of the RTC led by Dr. Jesus Rodrigo F. Torres, and the
-                        Collegiate and High School Faculty Clubs at the forefront of the struggle for survival,
-                        President Ferdinand E. Marcos signed into law Presidential Decree 1341-A on April 1, 1978,
-                        converting the Rizal Technological Colleges into a State College. The decree, however, was
-                        received only on October 13, 1978; thus, the RTC has been celebrating its College Week, and
-                        later its University Week on the days centered on October 13. After 19 years, the college was
-                        converted into the Rizal Technological University on October 11, 1997, by virtue of Republic Act
-                        No. 8365.
-                    </p>
-                    <p>
-                        RTU provides professional, scientific, and technological education in engineering, technology,
-                        education, arts, sciences, business, and entrepreneurship. It also promotes research, extension,
-                        and advanced studies in these areas. Through its Cooperative Education Program, RTU maintains
-                        strong industry partnerships and involves students in civic activities. The university’s
-                        programs are duly accredited by the Accrediting Agency of Chartered Colleges and Universities in
-                        the Philippines (AACCUP). The university is also ISO-certified.
-                    </p>
-                    <p>
-                        Today, RTU has two campuses. The Mandaluyong Main Campus houses the College of Arts and Sciences
-                        (CAS), the College of Business, Entrepreneurship, and Accountancy (CBEA), the College of
-                        Education (CEd), and the College of Engineering (CEng). The Pasig Branch includes the Institute
-                        of Human Kinetics (IHK), the Institute of Architecture (IA), and the Institute of Computer
-                        Studies (ICS).
-                    </p>
-                    <p>
-                        RTU is recognized for pioneering several innovative academic programs in the Philippines, such
-                        as Doctor of Technology Education, Master of Science in Engineering Education, Instrumentation
-                        and Control Engineering, Computer Engineering, and Instrumentation and Control Technology. It
-                        serves as the National Instrumentation and Control Center and the Welding and Research Training
-                        Center. RTU is also a pilot school for the Technology Resource Center under the Ministry of
-                        Human Settlements and a member of the school network implementing the Engineering and Science
-                        Education Program (ESEP) in the Philippines.
-                    </p>
-                    <p>At present, RTU is renowned for its academic excellence, with students consistently achieving top
-                        ranks in numerous board examinations. The university is committed to promoting free higher
-                        education, strengthening relationships between academia and industry, and establishing
-                        international partnerships to continuously broaden its horizons. Through these efforts, RTU not
-                        only maintains its reputation as a leading educational institution but also ensures that its
-                        graduates are well-prepared to contribute to the global community.</p>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <h1 class="fs-5 text-color text-center"><b>THE PANDAYANG RIZALIA ETHOS</b></h1>
-        </div>
-        <div class="row">
-            <div class="col-lg-3 col-md-3 col-sm-12">
-                <img src="./img/photo2.jpg" alt="" width="300px" c>
-            </div>
-            <div class="col-lg-9">
-                <div class="my-2 mx-4">
-                    <p>
-                        Substantiated by RTU’s mission to produce graduates honed and cloaked in Dr. Jose Rizal’s
-                        patriotic ideals and values, the “Pandayang Rizalia” came into being.
-                    </p>
-                    <p>
-                        Pandayang Rizalia is a cogent expression construed as a “Forge of Rizalian Ideals” or “Forge of
-                        Rizal’s Teachings” that suggests a place or institution dedicated to nurturing and developing
-                        the values and principles exemplified by Dr. Jose Rizal such as love of country, intellectual
-                        pursuit, social justice, and moral integrity.
-                    </p>
-                    <p>
-                        Pandayang Rizalia is an educational institution that provides holistic learning environments and
-                        learning spaces, emboldening the illustriousness of Rizal’s patriotism. It is envisioned as a
-                        center of learning, culture, and character development where individuals are molded and enlaced
-                        with Rizal’s noble ideals as a paragon of wisdom and intellect.
-                    </p>
-                    <p>
-                        RTU also appropriated Pandayang Rizalia as its identifying mantra and moniker to seal its brand
-                        with reverence to the warrior and hero it is named after. An emblem that highlights academic
-                        excellence, cultivation of patriotism, critical thinking, and ethical leadership reflecting the
-                        spirit of Rizal’s life and work. An ultimate driver that produces generations honed like metals
-                        and beaten into a final shape worthy of Rizal’s legacy, borne with an inflexible, daring, and
-                        zealous character unbending to tyranny.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <hr class="mx-3">
-    <h2 class="text-center" id="m_v_p">Mission, Vision, and Philosophy</h2>
-
-
-    <div class="position-relative">
-        <img src="./img/Capture4.1.PNG" class="img-fluid w-100" alt="">
-        <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
-            style="background-color: rgba(0,0,0,0.4);">
-            <div class="container">
-                <h1 class="text-white display-4 fw-bold">OUR MISSION, VISION, AND PHILOSOPHY</h1>
-            </div>
-        </div>
-    </div>
-    <div class="container-fluid">
-        <div class="row">
-            <h2 class="text-color text-center my-3">MISSION</h2>
-        </div>
-        <div class="row">
-            <div class="col">
-                <div class="my-2 mx-4">
-                    <p>
-                        To produce competent and socially responsible professionals through innovative instructions,
-                        high- impact research, and sustainable extension services responsive to the diverse needs of
-                        glocal communities.
-                    </p>
-                    <p>
-                        Makalikha ng mga propesyonal na may kakayahan at may gampaning panlipunan sa pamamagitan ng
-                        inobatibong pagtuturo, mataas na antas ng pananaliksik, at nagpapatuloy na programang
-                        pang-ekstensiyon na tumutugon sa iba’t ibang pangangailangan ng mga glokal na komunidad.
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <h2 class="text-color text-center my-3">VISION</h2>
-        </div>
-        <div class="row">
-            <div class="col">
-                <div class="text-center my-2 mx-4">
-                    <p>A smart and transnational university.</p>
-                    <p>Isang matalino at transnasyonal na unibersidad.</p>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <h2 class="text-color text-center my-3">PHILOSOPHY</h2>
-        </div>
-        <div class="row">
-            <div class="col">
-                <div class="my-2 mx-4">
-                    <p>
-                        The Rizal Technological University believes in nurturing the creative potentials of Filipinos to
-                        excel in a dynamic world order and advocates commitment to global peace and sustainable
-                        development along with sense of moral responsibility and cultural patronage.
-                    </p>
-                    <p>
-                        Naniniwala ang Rizal Technological University sa pangangalaga sa malikhaing potensyal ng mga
-                        Filipino upang manguna sa pabago-bagong takbo ng mundo at magtaguyod ng komitment patungo sa
-                        pandaigdigang kapayapaan at napananatiling pag-unlad kasabay ng moral na responsibilidad at
-                        kultural na pagtangkilik.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <hr class="mx-3">
-    <h2 class="text-center" id="g_ob">Goals and Objectives</h2>
-
-    <div class="position-relative">
-        <img src="./img/Capture5.1.PNG" class="img-fluid w-100" alt="">
-        <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
-            style="background-color: rgba(0,0,0,0.4);">
-            <div class="container">
-                <h1 class="text-white display-4 fw-bold text-center">GOALS AND OBJECTIVES</h1>
-            </div>
-        </div>
-    </div>
-    <div class="container-fluid">
-        <div class="row">
-            <h2 class="text-color text-center my-3">GOALS</h2>
-        </div>
-        <div class="row">
-            <div class="col">
-                <div class="my-2 mx-4 text-center">
-                    <p>
-                        To produce world-class professional and leaders with advanced scientific and technological
-                        skills and knowledge in response to various expectations and needs of society.
-                    </p>
-
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <h2 class="text-color text-center my-3">OBJECTIVES</h2>
-            <div class="d-flex justify-content-center">
-                <ul class="list-unstyled">
-                    <li>• Enhance critical thinking through independent study leading to innovations for socio-economic
-                        progress;</li>
-                    <li>• Enhance critical thinking through independent study leading to innovations for socio-economic
-                        progress;</li>
-                    <li>• Provide relevant training in research to actively contribute to the advancement of knowledge
-                        and the nation’s sustainable growth and development;</li>
-                    <li>• Serve as a center for the delivery of responsive extension programs and linkages to the
-                        various stakeholders.</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <hr class="mx-3">
-    <h2 class="text-center text-color" id="contact">Contact Us</h2>
-
-    <div class="container">
-        <div class="d-flex justify-content-center mb-3">
-            <div class="contact-form" id="form">
-                <form id="contactFormFields">
-                    <div class="mb-3 text-start">
-                        <label class="form-label">Name</label>
-                        <input type="text" class="form-control" id="name" placeholder="Enter your name">
-                        <div class="error text-danger" id="nameError"></div>
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card h-100 border-0 shadow-lg text-center hover-card">
+                        <div class="card-body p-5">
+                            <div class="feature-icon mb-4">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <h2 class="text-color">PHILOSOPHY</h2>
+                            <p>
+                                The Rizal Technological University believes in nurturing the creative potentials of
+                                Filipinos to
+                                excel in a dynamic world order and advocates commitment to global peace and sustainable
+                                development along with sense of moral responsibility and cultural patronage.
+                            </p>
+                            <p>
+                                <em>Naniniwala ang Rizal Technological University sa pangangalaga sa malikhaing
+                                    potensyal ng mga
+                                    Filipino upang manguna sa pabago-bagong takbo ng mundo at magtaguyod ng komitment
+                                    patungo sa
+                                    pandaigdigang kapayapaan at napananatiling pag-unlad kasabay ng moral na
+                                    responsibilidad at
+                                    kultural na pagtangkilik.</em>
+                            </p>
+                        </div>
                     </div>
-                    <div class="mb-3 text-start">
-                        <label class="form-label">Email</label>
-                        <input type="email" class="form-control" id="email" placeholder="Enter your email">
-                        <div class="error text-danger" id="emailError"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="mx-3">
+
+    <section id="g_ob" class="py-5">
+        <div class="position-relative">
+            <img src="./img/Capture5.1.PNG" class="img-fluid w-100" alt="">
+            <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
+                style="background-color: rgba(0,0,0,0.6);">
+                <div class="container">
+                    <h1 class="text-white display-4 fw-bold text-center" data-aos="zoom-in">GOALS AND OBJECTIVES</h1>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid mt-5">
+            <div class="row justify-content-center">
+                <div class="col-md-6 mb-5" data-aos="fade-right">
+                    <div class="card border-0 shadow-lg h-100">
+                        <div class="card-body p-5 text-center">
+                            <div class="feature-icon mb-4">
+                                <i class="fas fa-flag"></i>
+                            </div>
+                            <h2 class="text-color">GOALS</h2>
+                            <p class="lead">
+                                To produce world-class professional and leaders with advanced scientific and
+                                technological
+                                skills and knowledge in response to various expectations and needs of society.
+                            </p>
+                        </div>
                     </div>
-                    <div class="mb-3 text-start">
-                        <label class="form-label">Message</label>
-                        <textarea class="form-control" id="message" rows="3"
-                            placeholder="Enter your message"></textarea>
-                        <div class="error text-danger" id="messageError"></div>
+                </div>
+                <div class="col-md-6 mb-5" data-aos="fade-left">
+                    <div class="card border-0 shadow-lg h-100">
+                        <div class="card-body p-5">
+                            <div class="text-center mb-4">
+                                <div class="feature-icon">
+                                    <i class="fas fa-tasks"></i>
+                                </div>
+                                <h2 class="text-color">OBJECTIVES</h2>
+                            </div>
+                            <ul class="list-unstyled">
+                                <li class="mb-3 objective-item">
+                                    <div class="d-flex">
+                                        <div class="me-3"><i class="fas fa-check-circle text-success"></i></div>
+                                        <div>Enhance critical thinking through independent study leading to innovations
+                                            for
+                                            socio-economic progress;</div>
+                                    </div>
+                                </li>
+                                <li class="mb-3 objective-item">
+                                    <div class="d-flex">
+                                        <div class="me-3"><i class="fas fa-check-circle text-success"></i></div>
+                                        <div>Provide relevant training in research to actively contribute to the
+                                            advancement of
+                                            knowledge and the nation's sustainable growth and development;</div>
+                                    </div>
+                                </li>
+                                <li class="mb-3 objective-item">
+                                    <div class="d-flex">
+                                        <div class="me-3"><i class="fas fa-check-circle text-success"></i></div>
+                                        <div>Serve as a center for the delivery of responsive extension programs and
+                                            linkages
+                                            to the various stakeholders.</div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                    <button type="button" class="btn btn-custom" onclick="submitMsg()">Submit</button>
-                </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="mx-3">
+
+    <div class="container py-5" id="contact">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6">
+
+                <div id="alertContainer"></div>
+
+                <div class="contact-form" id="contactForm">
+                    <h3 class="mb-4 text-center text-color">Send Us a Message</h3>
+                    <form id="contactFormFields">
+                        <div class="mb-3 text-start">
+                            <label for="name" class="form-label">Name</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                            </div>
+                            <div class="error text-danger mt-1 small" id="nameError"></div>
+                        </div>
+
+                        <div class="mb-3 text-start">
+                            <label for="email" class="form-label">Email</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                                <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                            </div>
+                            <div class="error text-danger mt-1 small" id="emailError"></div>
+                        </div>
+
+                        <div class="mb-3 text-start">
+                            <label for="subject" class="form-label">Subject</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fas fa-heading"></i></span>
+                                <input type="text" class="form-control" id="subject" placeholder="Enter subject">
+                            </div>
+                            <div class="error text-danger mt-1 small" id="subjectError"></div>
+                        </div>
+
+                        <div class="mb-4 text-start">
+                            <label for="message" class="form-label">Message</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fas fa-comment"></i></span>
+                                <textarea class="form-control" id="message" rows="4"
+                                    placeholder="Enter your message"></textarea>
+                            </div>
+                            <div class="error text-danger mt-1 small" id="messageError"></div>
+                        </div>
+
+                        <button type="button" class="btn btn-custom" onclick="submitMsg()">
+                            <i class="fas fa-paper-plane me-2"></i>Submit Message
+                        </button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
 
-    <footer class="bg-dark text-white text-center py-2">
-        Copyright © 2024 Rizal Technological University
+    <footer class="text-white text-center py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <p class="mb-0">Copyright © 2024 Rizal Technological University. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
     </footer>
-
 </body>
+
+<script>
+    function submitMsg() {
+        let isValid = true;
+
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const message = document.getElementById("message").value.trim();
+
+        const nameError = document.getElementById("nameError");
+        const emailError = document.getElementById("emailError");
+        const messageError = document.getElementById("messageError");
+
+
+        nameError.innerText = "";
+        emailError.innerText = "";
+        messageError.innerText = "";
+
+
+        if (!name) {
+            nameError.innerText = "Name is required.";
+            isValid = false;
+        }
+        if (!email) {
+            emailError.innerText = "Email is required.";
+            isValid = false;
+        }
+
+        if (!message) {
+            messageError.innerText = "Message is required.";
+            isValid = false;
+        }
+
+        if (isValid) {
+            document.getElementById("form").innerHTML = `
+            <h3 class="fw-bold">Message Sent</h3>
+            <p>Thank you for reaching out! We will get back to you soon.</p>
+        `;
+        }
+    }
+</script>
 
 </html>
